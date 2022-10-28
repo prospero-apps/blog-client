@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: coral;
+}
+
+/* HEADER */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 15vh;
+  background-color: rgb(204, 87, 9);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-shadow: 0 2px 15px black;
+}
+
+.logo {
+  width: 8rem;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 3rem;
+  align-items: center;
+  list-style: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: rgb(215, 241, 215);
+}
+
+/* HOME PAGE
+
+/*********************************/
+
+
+/* HEADER */
+
+
+
+
+
+
+
+
+/* .cart-image {
+  display: flex;
+  align-items: center;
+} */
+
+/* HOME + ABOUT + CHECKOUT */
+/* .home-about-checkout {
+  margin: 50px;
+} */
+
+/* STORE */
+/* .store-display {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 5rem;
+} */
+
+/* PRODUCT */
+/* .store-product {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 1rem;
+} */
+
+/* .single-product {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+} */
+
+/* .product-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+/* .add-button {
+  background-color: black;
+  color: white;
+} */
+
+/* .single-product .add-button {
+  font-size: 2rem;
+} */
+
+/* .add-button:hover,
+.add-button:active {
+  background-color: white;
+  color: black;
+} */
+
+/* CART */
+/* .cart-item {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 2fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+} */
+
+/* .product-icon {
+  height: 4rem;
+} */
+
+/* .trash-image {
+  height: 3rem;
+} */
+
+/* .trash-image:hover {
+  cursor: pointer;
+} */
+
+/* .quantity-input {
+  font-size: 1rem;
+} */
+
+/* .subtotal {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10rem;
+} */
+
+/* .checkout-link {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  width: 20%;
+  color: green;
+  border: 4px solid green;
+  padding: 5px;
+} */
+
+
+
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
