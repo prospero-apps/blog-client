@@ -1,10 +1,12 @@
 import React from 'react';
 import '../style.css';
 
-const Comment = () => {
+const Comment = ({ comment }) => {
   return (
-    <div>
-      <h1>Comment</h1>
+    <div className='comment'>
+      <p>{comment.content}</p>
+      <p>{comment.user.username}</p>
+      <p>{comment.date.slice(0, 10)}</p>
     </div>
   )
 }

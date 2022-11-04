@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import '../style.css'
+import Post from './Post'
 
 const HomePage = () => {
-  const [posts, setPosts] = useState()
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8000/posts')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      console.log(posts)
+    getPosts()
   }, [])
 
-  
+  const getPosts = async() => {
+    let result = await fetch('https://web-production-ce1a.up.railway.app/posts')
+    result = await result.json()
+    setPosts(result)
+  }
 
-
-
+  console.log(posts);
 
   return (
-    <div>
-      <h1>HomePage</h1>
+    <div className='page'>
+      <div className='homepage'>
+        { posts &&
+            posts.map((post) => {
+              return <Post key={post._id} post={post} />
+            })
+        }
+      </div>
     </div>
   )
 }

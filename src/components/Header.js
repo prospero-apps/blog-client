@@ -1,18 +1,31 @@
-import React from 'react';
-import '../style.css';
-import logo from '../images/logo.png';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import '../style.css'
+import logo from '../images/logo.png'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Header = () => {
+  const token = localStorage.getItem('token')
+  const navigate = useNavigate()
+  const logout = () => {
+    localStorage.clear()
+    navigate('/login')
+  }
+
   return (
     <nav>
       <img className='logo' src={logo} alt='logo'/>
-      <ul id='nav-links'>
-        <Link className='link' to='/'><li>Home</li></Link>
-        <Link className='link' to='/login'><li>Log In</li></Link>
-        <Link className='link' to='/signup'><li>Sign Up</li></Link> 
-        <Link className='link' to='/logout'><li>Log Out</li></Link> 
-      </ul>
+      {
+        token ?
+          <ul className='nav-links'>
+            <li><Link className='link' to='/'>Home</Link></li>
+            <li><Link className='link' onClick={logout} to='/signup'>Log Out</Link></li>
+          </ul>
+          :
+          <ul className='nav-links'>
+            <li><Link className='link' to='/signup'>Sign Up</Link></li>
+            <li><Link className='link' to='/login'>Log In</Link></li>
+          </ul>
+      }                     
     </nav>
   )
 }
